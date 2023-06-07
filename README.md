@@ -6,9 +6,9 @@ four of the curriculum, I'm learning Python, MySQL and JavaScript.
 Simultaneously, I continued to reinforce and expand my skills in C and shell
 scripting. The specific list of projects contained follows:
 
-* [0x00. Python - Hello, World](./0x00-python-hello_world)
+* [0x00-Python - Hello, World](./0x00-python-hello_world)
 
-* 0x01-python-if_else_loops_functions
+* [0x01-Python-if_else_loops_functions](./0x01-python-if_else_loops_functions)
 
 ## Author :black_nib:
 
