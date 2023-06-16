@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 # 12-roman_to_int.py
-# Brennan D Baraban <375@holbertonschool.com>
-
+# John Mwadime <johnniekips@gmail.com>
 
 def roman_to_int(roman_string):
     """Converts a roman numeral to an integer."""
