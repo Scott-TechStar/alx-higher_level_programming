@@ -1,6 +1,6 @@
 /*
  * File: 103-python.c
- * Auth: Brennan D Baraban
+ * Auth: John Mwadime
  */
 
 #include <Python.h>
