@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # 10-best_score.py
-# Brennan D Baraban <375@holbertonschool.com>
+# John Mwadime <johnniekips@gmail.com>
 
 
 def best_score(a_dictionary):
