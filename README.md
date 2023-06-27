@@ -17,6 +17,10 @@ scripting. The specific list of projects contained follows:
   
 * [0x04-Python - More Data Structures: Set, Dictionary](./0x04-python-more_data_structures)
 
+* [0x05-Python - Exceptions](./0x05-python-exceptions)
+
+* [0x06-Python - Classes and Objects](./0x06-python-classes)
+
 ## Author :black_nib:
 
 * **John Mwadime** <[Scott-TechStar](https://github.com/Scott-TechStar)>
