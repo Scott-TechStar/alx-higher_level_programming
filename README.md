@@ -21,6 +21,8 @@ scripting. The specific list of projects contained follows:
 
 * [0x06-Python - Classes and Objects](./0x06-python-classes)
 
+* [0x07-Python - Test-driven development](./0x07-python-test_driven_development)
+
 ## Author :black_nib:
 
 * **John Mwadime** <[Scott-TechStar](https://github.com/Scott-TechStar)>
