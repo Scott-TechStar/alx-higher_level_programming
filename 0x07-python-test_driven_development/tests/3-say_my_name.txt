@@ -1,5 +1,5 @@
 # 3-say_my_name.txt
-# Brennan D Baraban <375@holbertonschool.com>
+# John Mwadime
 
 ===========================
 How to Use 3-say_my_name.py
