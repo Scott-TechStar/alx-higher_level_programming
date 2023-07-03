@@ -24,6 +24,7 @@ how to use the special `__str__` and `__repr__` methods.
   raised with the message `width must be an integer` or `height must be an integer`.
   * If either of `width` or `height` is less than `0`, a `ValueError` is
   raised with the message `width must be >= 0` or `height must be >= 0`.
+  * Instantiation with optional `width` and `height: def __init__(self, width=0, height=0):`
 
 * **2. Area and Perimeter**
   * [2-rectangle.py](./2-rectangle.py): Python class that defines a rectangle. Builds on
