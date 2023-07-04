@@ -21,61 +21,57 @@ queen must be placed on the chessboard.
 """
 import sys
 
-def nqueens(N):
-    def is_safe(board, row, col):
-        # Check if the current position is attacked by any previous queens
-        # Check horizontally
-        for i in range(col):
-            if board[row][i] == 'Q':
-                return False
-        # Check diagonally (upper-left)
-        i, j = row, col
-        while i >= 0 and j >= 0:
-            if board[i][j] == 'Q':
-                return False
-            i -= 1
-            j -= 1
-        # Check diagonally (lower-left)
-        i, j = row, col
-        while i < N and j >= 0:
-            if board[i][j] == 'Q':
-                return False
-            i += 1
-            j -= 1
-        return True
+def is_safe(board, row, col, N):
+    # Check if there is a queen in the same column
+    for i in range(row):
+        if board[i][col] == 1:
+            return False
 
-    def solve_nqueens(board, col):
-        if col >= N:
-            # Solution found, print the board configuration
-            for row in board:
-                print(' '.join(row))
+    # Check if there is a queen in the upper-left diagonal
+    for i, j in zip(range(row, -1, -1), range(col, -1, -1)):
+        if board[i][j] == 1:
+            return False
+
+    # Check if there is a queen in the upper-right diagonal
+    for i, j in zip(range(row, -1, -1), range(col, N)):
+        if board[i][j] == 1:
+            return False
+
+    return True
+
+def nqueens_util(board, row, N):
+    if row == N:
+        for i in range(N):
+            for j in range(N):
+                print(board[i][j], end=" ")
             print()
-            return
-        for row in range(N):
-            if is_safe(board, row, col):
-                board[row][col] = 'Q'
-                solve_nqueens(board, col + 1)
-                board[row][col] = '.'
-    
-    # Input validation
-    if len(sys.argv) != 2:
-        print("Usage: nqueens N")
-        sys.exit(1)
+        print()
+        return
 
-    try:
-        N = int(sys.argv[1])
-    except ValueError:
+    for col in range(N):
+        if is_safe(board, row, col, N):
+            board[row][col] = 1
+            nqueens_util(board, row + 1, N)
+            board[row][col] = 0
+
+def nqueens(N):
+    if not N.isdigit():
         print("N must be a number")
         sys.exit(1)
+    
+    N = int(N)
 
     if N < 4:
         print("N must be at least 4")
         sys.exit(1)
 
-    # Initialize the board
-    board = [['.' for _ in range(N)] for _ in range(N)]
-    solve_nqueens(board, 0)
+    board = [[0 for _ in range(N)] for _ in range(N)]
+    nqueens_util(board, 0, N)
 
-# Run the program
-if __name__ == '__main__':
-    nqueens(int(sys.argv[1]))
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: nqueens N")
+        sys.exit(1)
+
+    nqueens(sys.argv[1])
+
