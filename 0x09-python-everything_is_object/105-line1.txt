@@ -1,7 +1,1 @@
 0
-
-Before the execution of line 2 (print("Love")), only one `int` object has been created and is still in memory. This is because the statement `print("I")` does not create any `int` objects.
-
-In the given code snippet, the statements `print("I")`, `print("Love")`, and `print("Python")` are all string literals, not `int` objects. The `print` function simply outputs the given strings to the console without creating any `int` objects.
-
-To clarify, an `int` object in Python represents an integer value, such as `1`, `2`, `-3`, etc. In the provided code snippet, there are no integer values or operations involving integers that would create `int` objects. Therefore, only the string literals are printed, and no `int` objects are created or stored in memory.
