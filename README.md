@@ -27,6 +27,8 @@ scripting. The specific list of projects contained follows:
 
 * [0x09-Python - Everything is object](./0x09-python-everything_is_object)
 
+* [0x0A-Python - Inheritance](./0x0A-python-inheritance)
+
 ## Author :black_nib:
 
 * **John Mwadime** <[Scott-TechStar](https://github.com/Scott-TechStar)>
