@@ -1,31 +1,12 @@
 #!/usr/bin/python3
 # 2-read_lines.py
 # John Mwadime
-"""Defines a text file-reading function."""
+"""
+function that appends a string
+"""
 
 
-def read_lines(filename="", nb_lines=0):
-    """Print a given number of lines from a UTF8 text file to stdout.
-
-    Args:
-        filename (str): The name of the file.
-        nb_lines (int): The number of lines to read from the file.
-    """
-    with open(filename, encoding="utf-8") as f:
-        if nb_lines <= 0:
-            print(f.read(), end="")
-            return
-
-        lines = 0
-        for line in f:
-            lines += 1
-        f.seek(0)
-        if nb_lines >= lines:
-            print(f.read(), end="")
-            return
-
-        else:
-            n = 0
-            while n < nb_lines:
-                print(f.readline(), end="")
-                n += 1
+def append_write(filename="", text=""):
+    """eturns the number of characters added:"""
+    with open(filename, 'a', encoding='utf=8') as f:
+        return f.write(text)
