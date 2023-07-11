@@ -4,10 +4,6 @@ In this project, I practiced file handling in Python. I used the builtin `with`,
 `open`, and `read` functions with the `json` module to read and write files and
 serialize and deserialize objects with JSON.
 
-## Tests :heavy_check_mark:
-
-* [tests](./tests): Folder of test files. Provided by Holberton School.
-
 ## Function Prototypes :floppy_disk:
 
 Prototypes for functions written in this project:
@@ -143,46 +139,35 @@ Prototypes for functions written in this project:
    You are not allowed to import any module
 
 * **12. Student to JSON with filter**
-  * [12-student.py](./12-student.py): Python class `Student` that defines a student. Builds on
-  [11-student.py](./11-student.py) with:
-    * Public method `def to_json(self, attrs=None):` that returns the
-    dictionary representation of a `Student` instance.
-    * If `attrs` is a list of strings, only the attributes listed are
-    represented in the dictionary.
+  * [12-pascal_triangle.py](./12-pascal_triangle.py): Technical interview preparation:
 
+   You are not allowed to google anything
+   Whiteboard first
+   Create a function `def pascal_triangle(n):` that returns a list of lists of integers representing the Pascal’s triangle of n:
+   
+   Returns an empty list if `n <= 0`
+   You can assume` n `will be always an integer
+   You are not allowed to import any module
+  
 * **13. Student to disk and reload**
-  * [13-student.py](./13-student.py): Python class `Student` that defines a student. Builds on
-  [12-student.py](./12-student.py) with:
-    * Public method `def reload_from_json(self, json):` that replaces all
-    attributes of the `Student` instance using the key/value pairs listed in `json`.
-    * The method assumes `json` is a dictionary containing attributes with
-    name/value corresponding to key/value.
+  * [100-append_after.py](./100-append_after.py): Write a function that inserts a line of text to a file, after each line containing a specific string (see example):
+
+  Prototype: `def append_after(filename=""`, `search_string=""`, `new_string=""):`
+  You must use the with statement
+  You don’t need to manage file permission or file doesn't exist exceptions.
+  You are not allowed to import any module
 
 * **14. Pascal's Triangle**
-  * [14-pascal_triangle.py](./14-pascal_triangle.py): Python function that returns a list of lists of
-  integers representing Pascal's triangle of size `n`.
-  * Assumes the size parameter `n` is an integer.
-  * If `n` is less than or equal to `0`, returns an empty list.
+  * [101-stats.py](./101-stats.py): Write a script that reads stdin line by line and computes metrics:
 
-* **15. Search and update**
-  * [100-append_after.py](./100-append_after.py): Python function that inserts a line of text to a
-  file after each line containing a specified string.
+   Input format: `<IP Address> - [<date>] "GET /projects/260 HTTP/1.1" <status code> <file size>`
+   Each 10 lines and after a keyboard interruption `(CTRL + C),` prints those statistics since the beginning:
+   Total file size: File size: `<total size>`
+   where is the sum of all previous (see input format above)
+   Number of lines by status code:
+   possible status code: `200, 301, 400, 401, 403, 404, 405 and 500`
+   if a status code doesn’t appear, don’t print anything for this status code
+   format: `<status code>: <number>`
+   status codes should be printed in ascending order
 
-* **16. Log parsing**
-  * [101-stats.py](./101-stats.py): Python script that reads lines from standard input. After
-  every 10 lines or the input of a keyboard interruption (`CTRL + C`), computes the
-  following metrics:
-    * Total file size up that point: `File size: <total size>`
-    * Status code of each read line, printed in ascending order:
-    `<status code>: <number>`
-  * Input format: `<IP Address> - [<date>] "GET /projects/260 HTTP/1.1"
-  <status code> <file size>`
 
-* **17. Hack the VM**
-  * [read_write_heap.py](./read_write_heap.py): Python script that finds and replaces a string in the
-  heap of a running process.
-  * Usage: `read_write_heap.py pid search_string replace_string` where `pid` is
-  the process ID of the running process and strings are represented in ASCII.
-  * Only looks in the heap of the process.
-  * On a usage error, prints an error message to `stdout` and exits with the
-  status code `1`.
