@@ -29,6 +29,8 @@ scripting. The specific list of projects contained follows:
 
 * [0x0A-Python - Inheritance](./0x0A-python-inheritance)
 
+* [0x0B. Python - Input/Output](./0x0B-python-input_output)
+
 ## Author :black_nib:
 
 * **John Mwadime** <[Scott-TechStar](https://github.com/Scott-TechStar)>
