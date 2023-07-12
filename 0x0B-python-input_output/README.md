@@ -17,14 +17,14 @@ Prototypes for functions written in this project:
 | `4-from_json_string.py` | `def from_json_string(my_str):` |
 | `5-save_to_json_file.py` | `def save_to_json_file(my_obj, filename):` |
 | `6-load_from_json_file.py` | `def load_from_json_file(filename):` |
-| `7-add_item.py` | `` |
+| `7-add_item.py` | |
 | `8-class_to_json.py` | `def class_to_json(obj):` |
 | `9-student.py` | `def __init__(self, first_name, last_name, age):` |
 | `10-student.py` | `def __init__(self, first_name, last_name, age):` |
-| `11-student.py` | `` |
+| `11-student.py` |  |
 | `12-pascal_triangle.py` | `def pascal_triangle(n):` |
 | `100-append_after.py` | `def append_after(filename="", search_string="", new_string=""):` |
-| `101-stats.py` | `` |
+| `101-stats.py` |  |
 
 
 ## Tasks :page_with_curl:
