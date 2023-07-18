@@ -31,6 +31,8 @@ scripting. The specific list of projects contained follows:
 
 * [0x0B-Python - Input/Output](./0x0B-python-input_output)
 
+* [0x0C-Python - Almost a circle](./0x0C-python-almost_a_circle)
+
 ## Author :black_nib:
 
 * **John Mwadime** <[Scott-TechStar](https://github.com/Scott-TechStar)>
