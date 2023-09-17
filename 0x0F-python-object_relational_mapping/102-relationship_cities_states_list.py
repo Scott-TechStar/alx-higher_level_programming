@@ -1,28 +1,27 @@
 #!/usr/bin/python3
+import sys
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 from relationship_state import Base, State
 from relationship_city import City
-from sqlalchemy.orm import sessionmaker, relationship
-from sqlalchemy import create_engine
-import sys
-"""
-    Module that performs MySQL query through MySQLAlchemy.
-"""
 
-
-if __name__ == "__main__":
-    db_uri = 'mysql+mysqldb://{}:{}@localhost/{}'.format(
-                                                            sys.argv[1],
-                                                            sys.argv[2],
-                                                            sys.argv[3])
-
-    engine = create_engine(db_uri, pool_pre_ping=True)
+def list_cities(username, password, db_name):
+    engine = create_engine(f"mysql+mysqlconnector://{username}:{password}@localhost:3306/{db_name}")
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for a_city in session.query(City).order_by(City.id):
-            print("{}: {} -> {}".format(a_city.id, a_city.name,
-                  a_city.state.name))
+    cities = session.query(City).order_by(City.id).all()
+
+    for city in cities:
+        print(f"{city.name} ({city.state.name})")
 
     session.close()
+
+if __name__ == "__main__":
+    if len(sys.argv) != 4:
+        print("Usage: python list_cities.py <username> <password> <db_name>")
+    else:
+        username, password, db_name = sys.argv[1], sys.argv[2], sys.argv[3]
+        list_cities(username, password, db_name)
